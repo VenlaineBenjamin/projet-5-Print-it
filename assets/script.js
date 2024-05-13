@@ -28,16 +28,17 @@ tagLine.innerHTML = slides[0].tagLine;
 const dots = document.querySelectorAll(".dot");
 const dotSelected = document.querySelector(".dot_selected");
 
-// deffilement automatique des images de la bannière et ajout des dots
+// affichage du slider
 let i = 0;
-setInterval(() => {
-    imageBanner.src = slides[i].image;
-    tagLine.innerHTML = slides[i].tagLine;
-    i++;
-    if (i === slides.length) {
-        i = 0;
-    }
-}, 5000);
+slides.forEach((slide) => {
+    let dot = document.createElement("div");
+    dot.classList.add("dot");
+    document.querySelector(".dots");
+    dot.addEventListener("click", () => {
+        imageBanner.src = slide.image;
+        tagLine.innerHTML = slide.tagLine;
+    });
+});
 
 // ajout des dots sur mes images de la bannière
 for (let i = 0; i < slides.length; i++) {
