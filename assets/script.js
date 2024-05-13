@@ -65,6 +65,8 @@ imageBanner.addEventListener("load", () => {
 
 // flèches de navigation
 
+
+// flèche droite
 arrowRight.addEventListener("click", () => {
     i++;
     if (i === slides.length) {
@@ -74,6 +76,7 @@ arrowRight.addEventListener("click", () => {
     tagLine.innerHTML = slides[i].tagLine;
 });
 
+// flèche gauche
 arrowLeft.addEventListener("click", () => {
     i--;
     if (i < 0) {
